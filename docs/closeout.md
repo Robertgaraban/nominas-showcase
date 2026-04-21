@@ -19,8 +19,6 @@ Leave Nominas in a state where it can be shown as a strong portfolio project wit
 
 ## What remains before full closeout
 
-- optionally add screenshots
-- optionally refine GitHub repo description and topics
 - later extract or create a clean private repo for the source implementation if needed
 
 ## Rule before moving on
@@ -28,3 +26,15 @@ Leave Nominas in a state where it can be shown as a strong portfolio project wit
 Do not publish the working `Nominas/` folder directly from `Playground`.
 
 This showcase-first approach is the safe path.
+
+## Final posture
+
+Nominas should now be treated as closed for public portfolio purposes.
+
+That means:
+
+- no screenshots
+- no demo dataset
+- no public source release
+- no direct publication from the working `Nominas/` directory
+- controlled private review only when there is a serious evaluation need

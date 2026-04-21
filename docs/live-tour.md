@@ -2,7 +2,7 @@
 
 ## Goal
 
-This document makes the public showcase easier to evaluate by mapping the live application routes to the product areas they represent.
+This document maps the live application routes to the product areas they represent.
 
 Verified against the live deployment on `2026-04-21`.
 
@@ -11,7 +11,7 @@ Verified against the live deployment on `2026-04-21`.
 | Area | Live route | Access | What it represents |
 |------|------------|--------|--------------------|
 | App entry | [nomina.atlantechmarine.com](https://nomina.atlantechmarine.com) | public | Login shell and SPA entry point |
-| Kiosk punch | [nomina.atlantechmarine.com/reloj](https://nomina.atlantechmarine.com/reloj) | public field route | GPS-aware punch flow for field users |
+| Kiosk punch | [nomina.atlantechmarine.com/reloj](https://nomina.atlantechmarine.com/reloj) | controlled operational route | GPS-aware punch flow for field users |
 | Dashboard | [nomina.atlantechmarine.com/dashboard](https://nomina.atlantechmarine.com/dashboard) | authenticated | KPI cards, alerts, active projects, trends, quick actions |
 | Employees | [nomina.atlantechmarine.com/employees](https://nomina.atlantechmarine.com/employees) | `admin` | Employee management and detail flows |
 | Projects | [nomina.atlantechmarine.com/projects](https://nomina.atlantechmarine.com/projects) | `admin` | Project records, assignments, contractor linkage |
@@ -34,7 +34,7 @@ The report layer is not a placeholder. The implemented report suite includes:
 - [Payroll register](https://nomina.atlantechmarine.com/reports/register)
 - [Paycheck print](https://nomina.atlantechmarine.com/reports/paychecks)
 
-Most report routes are role-protected, but they are part of the live routed application structure.
+Most report routes are role-protected. Their inclusion here is route inventory evidence, not an invitation to open operational use.
 
 ## What this proves
 
@@ -44,6 +44,12 @@ This project should be evaluated as:
 - a route-complete SPA with multiple operational areas
 - a workflow-heavy system, not a static admin panel
 - a full-stack implementation that connects UI, API, payroll logic, reporting, and financial control
+
+It should not be evaluated as:
+
+- a public demo environment
+- an open-source payroll product
+- a repo that should publish operational screenshots or datasets
 
 ## Reading path
 
