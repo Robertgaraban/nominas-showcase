@@ -78,6 +78,16 @@ Known report areas include:
 - payroll register
 - paycheck print
 
+Representative routed paths:
+
+- `/reports`
+- `/reports/project-summary`
+- `/reports/project-worker`
+- `/reports/contractor-summary`
+- `/reports/worker`
+- `/reports/register`
+- `/reports/paychecks`
+
 ### 9. Settings
 
 Purpose:
@@ -98,6 +108,12 @@ The working product uses role-based access control with role distinctions such a
 - `admin`
 - `supervisor`
 - `viewer`
+
+Representative route access:
+
+- `admin`: employees, projects, payroll, financials, settings
+- `admin` + `supervisor`: timesheets, time punches, some reports
+- authenticated users: reports hub, manual, dashboard
 
 ## Portfolio interpretation
 

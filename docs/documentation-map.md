@@ -30,8 +30,9 @@ It was built with:
 ## Public reading order
 
 1. [README](../README.md)
-2. [Architecture](./architecture.md)
-3. [Workflows](./workflows.md)
-4. [Feature Map](./feature-map.md)
-5. [Public Scope](./public-scope.md)
-6. [Repository Strategy](./repo-strategy.md)
+2. [Live Tour](./live-tour.md)
+3. [Architecture](./architecture.md)
+4. [Workflows](./workflows.md)
+5. [Feature Map](./feature-map.md)
+6. [Public Scope](./public-scope.md)
+7. [Repository Strategy](./repo-strategy.md)

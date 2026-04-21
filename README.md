@@ -4,6 +4,27 @@ Nominas is a bilingual payroll, weekly timesheet, and labor cost control web app
 
 Live deployment: [nomina.atlantechmarine.com](https://nomina.atlantechmarine.com)
 
+## At a glance
+
+- Status: `live in production`
+- Product type: `internal payroll + labor operations system`
+- Audience: `admin`, `supervisor`, `viewer`
+- Stack: `React 18`, `Vite`, `TailwindCSS`, `PHP REST API`, `MySQL`, `JWT`
+- Access model: `public showcase + private source review on request`
+
+## Selected live entry points
+
+- App entry / login shell: [nomina.atlantechmarine.com](https://nomina.atlantechmarine.com)
+- Mobile kiosk punch: [nomina.atlantechmarine.com/reloj](https://nomina.atlantechmarine.com/reloj)
+- Dashboard: [nomina.atlantechmarine.com/dashboard](https://nomina.atlantechmarine.com/dashboard) `auth required`
+- Weekly timesheets: [nomina.atlantechmarine.com/timesheets](https://nomina.atlantechmarine.com/timesheets) `auth required`
+- Payroll: [nomina.atlantechmarine.com/payroll](https://nomina.atlantechmarine.com/payroll) `auth required`
+- Financial control: [nomina.atlantechmarine.com/financials](https://nomina.atlantechmarine.com/financials) `auth required`
+- Reports hub: [nomina.atlantechmarine.com/reports](https://nomina.atlantechmarine.com/reports) `auth required`
+- User manual: [nomina.atlantechmarine.com/manual](https://nomina.atlantechmarine.com/manual) `auth required`
+
+The application is a SPA, so these routes resolve through the same frontend shell and then enforce access by role.
+
 ## What I built
 
 Nominas is not a mock dashboard. It is an internal operations system built around real weekly payroll and labor-control workflows.
@@ -20,6 +41,88 @@ The implemented product scope includes:
 - reporting and exports
 - role-based access control
 - in-app manual and settings
+
+## System tour
+
+### 1. Login + dashboard
+
+The authenticated shell opens on a dashboard built for operations, not vanity metrics.
+
+It includes:
+
+- KPI cards for labor, requested, paid, and remaining amounts
+- quick actions into the main workflows
+- active-project visibility
+- multi-week trend charts for labor, requested, and paid amounts
+- alerting around pending financial-control state
+
+### 2. Weekly salary report
+
+The timesheet module is based on the real Excel-driven weekly salary report process.
+
+Key implemented behaviors include:
+
+- project selector + week selector
+- crew-group sections
+- Mon-Sun hour capture per worker
+- fixed weekly salary and hourly-rate support
+- copy previous week
+- save draft
+- approve week
+- markup-aware totals
+
+### 3. Mobile kiosk punch
+
+Nominas also includes a field-oriented punch flow instead of relying only on desktop data entry.
+
+The kiosk route supports:
+
+- mobile entry through `/reloj` and related aliases
+- phone-based employee lookup
+- 4-digit PIN confirmation
+- GPS acquisition
+- nearest-project detection
+- geofenced punch in / punch out behavior
+
+### 4. Payroll and period review
+
+The payroll area is not just a single export button.
+
+It includes:
+
+- payroll overview
+- payroll generation
+- payroll detail review
+- downstream register and paycheck reporting
+
+### 5. Financial control
+
+This is one of the strongest parts of the product because it connects labor capture to project money tracking.
+
+The module supports:
+
+- labor subtotal
+- admin fee
+- manual adjustments
+- requested amount
+- paid amount
+- remaining balance
+- weekly status progression from `draft` to `paid`
+
+### 6. Reports hub
+
+The reporting layer includes dedicated report flows for:
+
+- project summary
+- project worker detail
+- contractor summary
+- worker report
+- payroll register
+- paycheck print
+
+## Live tour and route evidence
+
+For a route-by-route overview of the implemented product, see [Live Tour](./docs/live-tour.md).
 
 ## Why this repository exists
 
@@ -91,6 +194,7 @@ Nominas solves a real operational problem:
 - weekly salary report flow replacing spreadsheet-heavy operations
 - payroll generation and pay-period detail
 - project financial control by week
+- GPS-aware kiosk punch flow
 - contractor/division grouping
 - multiple exportable reports
 - admin / supervisor / viewer roles
@@ -128,6 +232,7 @@ The product is documented around real workflow areas, not generic admin abstract
 
 - weekly salary report workflow
 - financial control workflow
+- live route and module tour
 - deployment and bootstrap workflow
 - API route surface
 - database structure
@@ -135,6 +240,7 @@ The product is documented around real workflow areas, not generic admin abstract
 
 See:
 
+- [Live Tour](./docs/live-tour.md)
 - [Architecture](./docs/architecture.md)
 - [Workflow Map](./docs/workflows.md)
 - [Feature Map](./docs/feature-map.md)
@@ -160,10 +266,12 @@ flowchart TD
 If you are reviewing this project, the fastest way to evaluate it is:
 
 1. Read the product summary in this README.
-2. Review the architecture snapshot in [docs/architecture.md](./docs/architecture.md).
-3. Review the workflow framing in [docs/workflows.md](./docs/workflows.md).
-4. Review the module and feature summary in [docs/feature-map.md](./docs/feature-map.md).
-5. Treat this repository as a portfolio layer, not as the full production codebase.
+2. Open the live routes listed above and see the system entry points.
+3. Review the route-by-route summary in [docs/live-tour.md](./docs/live-tour.md).
+4. Review the architecture snapshot in [docs/architecture.md](./docs/architecture.md).
+5. Review the workflow framing in [docs/workflows.md](./docs/workflows.md).
+6. Review the module and feature summary in [docs/feature-map.md](./docs/feature-map.md).
+7. Treat this repository as a portfolio layer, not as the full production codebase.
 
 ## Repository strategy
 

@@ -3,9 +3,12 @@
 Suggested screenshots to add here later:
 
 - dashboard
+- login shell
+- `/reloj` kiosk punch
 - weekly timesheet view
 - payroll view
 - financial control view
+- reports hub
 - one report screen
 
 Guideline:
