@@ -184,6 +184,12 @@ Contact:
 - GitHub: [Robertgaraban](https://github.com/Robertgaraban)
 - LinkedIn: [linkedin.com/in/robertgaraban](https://www.linkedin.com/in/robertgaraban)
 
+## Código fuente
+
+**Repositorio privado:** `Robertgaraban/nominas-private` — acceso como colaborador bajo solicitud
+
+Solicitar acceso: **robertgaraban@gmail.com** — Asunto: `[Acceso repo privado] nominas-private`
+
 ## Notes
 
 - This repository is a technical brief and portfolio layer.
